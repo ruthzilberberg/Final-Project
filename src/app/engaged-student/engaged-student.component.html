@@ -1,0 +1,19 @@
+<mat-toolbar class="mat">
+  <mat-grid-list cols="9" rowHeight="64px">
+    <mat-grid-tile colspan="2"><button  (click)="openDialog(-1)" class="b">
+      <mat-icon>add</mat-icon>הוספת תלמידה |</button> 
+   </mat-grid-tile>   <!-- <mat-grid-tile colspan="2"><a routerLink="/home"><mat-icon>delete</mat-icon> מחיקת תלמידה | </a></mat-grid-tile> -->
+    <mat-grid-tile colspan="2"> <a routerLink="/engagedStudent">עדכון תלמידה מאורסת |</a> </mat-grid-tile>
+    <mat-grid-tile colspan="2"> <a routerLink="/fileToData">הוספת קובץ תלמידות|</a> </mat-grid-tile>
+    <mat-grid-tile colspan="2"> שלום {{secretaryUser.SecretaryFirstName}} {{' '}}{{secretaryUser.SecretaryLastName}} |  </mat-grid-tile>
+    <mat-grid-tile colspan="1"><img src="assets/img/logo3.png"></mat-grid-tile>
+  </mat-grid-list>
+</mat-toolbar>
+
+<app-coordinator *ngIf="coordinator"></app-coordinator>
+<app-navigator-secretary *ngIf="secretary"></app-navigator-secretary>
+<mat-form-field appearance="fill" class="fill">
+    <mat-label>ת.ז</mat-label>
+    <input matInput name="studentTz"[(ngModel)]="studentTz">
+  </mat-form-field>
+  <button (click)="updateStudentEngaged()" ><mat-icon>save</mat-icon>שמירה</button>

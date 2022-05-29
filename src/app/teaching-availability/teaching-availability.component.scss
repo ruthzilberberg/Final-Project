@@ -1,0 +1,66 @@
+.example-section {
+  
+   margin-right: 30%;
+  margin-top: 10%;
+  // justify-content:center !important;
+  //   align-items:center !important;
+}
+
+.example-margin {
+  // margin: 12px;
+  font-size:200%;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
+.mat{background-color:white;
+  width: 100% !important;
+  font-family:Fb Baznat Black;
+  display: block;
+   }
+  
+  mat-grid-tile {
+    background:white;
+  }
+  app-navigator-teacher  {
+    // top:15%;
+    margin: 0;
+    margin-right: 0%;
+    padding: 0;
+    //גודל ה-sidenav
+    // width:9%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  img { 
+    height: 52px;
+    width: 65px;
+    // padding: 3%;
+  }
+  mat-grid-list{margin-right: 0%!important;}
+mat-grid-tile{margin-right: 0%!important;}
+mat-icon{color: #AE1E37;}
+button{background-color: white;}
+// ::ng-deep.mat-grid-tile.mat-figure{
+//   justify-content: right !important;
+//   align-items:right !important;
+ 
+//   width: 100% !important;
+// }
+// ::ng-deep.mat-grid-tile .mat-figure {
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   position: absolute;
+//   display: flex;
+// align-items: right; 
+//    justify-content: right; 
+//   height: 100%;
+//   padding: 0;
+//   margin: 0;
+// }

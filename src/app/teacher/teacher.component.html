@@ -1,0 +1,135 @@
+<mat-toolbar class="mat">
+  <mat-grid-list cols="9" rowHeight="64px">
+    <button><mat-grid-tile colspan="2" (click)="openDialog(-1)">
+        <mat-icon>add</mat-icon>הוספת מורה |
+     </mat-grid-tile></button>
+    <mat-grid-tile colspan="2">
+       
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2"> 
+      <!-- <a routerLink="/home">עדכון סוג הוראה למורה |</a>  -->
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2"> שלום {{secretaryUser.SecretaryFirstName}} {{' '}}{{secretaryUser.SecretaryLastName}} |  </mat-grid-tile>
+    <mat-grid-tile colspan="1"><img src="assets/img/logo3.png"></mat-grid-tile>
+  </mat-grid-list>
+</mat-toolbar>
+
+<!-- <mat-grid-list cols="6" >
+    <mat-grid-tile colspan="1"> -->
+<div class="row">
+  <app-coordinator *ngIf="coordinator"></app-coordinator>
+<app-navigator-secretary *ngIf="secretary"></app-navigator-secretary>
+  <!-- </mat-grid-tile> -->
+
+  <!-- <div *ngIf="precent" >
+<p>עדכן אחוז משרה</p>
+<input type="number" id=" PositionPrecent" name=" PositionPrecent" [(ngModel)]="teacher. PositionPrecent" /> 
+<button (click)="putPositionPrecent()">עדכן אחוז משרה</button>
+<span>{{teacherService.message.error}}</span>
+</div>
+
+<button  (click)="showPrecentInput()" >ציון אחוזי משרה</button> -->
+  <!-- <mat-grid-tile colspan="5"> -->
+  <div class="mat-elevation-z8 " class="col-md-10">
+    <table mat-table [dataSource]="teachers">
+      <!-- <table mat-table [dataSource]="dataSource" *ngFor="let teacher of teachers"> -->
+      <!-- Position Column -->
+      <ng-container matColumnDef="update">
+        <th mat-header-cell *matHeaderCellDef>עריכה</th>
+        <td mat-cell *matCellDef="let teacher:let i = index"><button>
+            <mat-icon (click)="openDialog(i)">create</mat-icon>
+          </button></td>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef>מחיקה</th>
+        <td mat-cell *matCellDef="let teacher:let j = index"><button>
+          <mat-icon (click)="deleteTeacher(teacher.TeacherId,j)">delete</mat-icon>
+        </button></td>
+      </ng-container>
+  
+
+      <ng-container matColumnDef="TeacherFirstName">
+        <th mat-header-cell *matHeaderCellDef> שם פרטי </th>
+        <td mat-cell *matCellDef="let teacher"> {{teacher.TeacherFirstName}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="TeacherLastName">
+        <th mat-header-cell *matHeaderCellDef>שם משפחה</th>
+        <td mat-cell *matCellDef="let teacher"> {{teacher.TeacherLastName }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="TeacherTz">
+        <th mat-header-cell *matHeaderCellDef>ת.ז</th>
+        <td mat-cell *matCellDef="let teacher"> {{teacher.TeacherTz}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="IsActive">
+        <th mat-header-cell *matHeaderCellDef>פעילה?</th>
+        <td mat-cell *matCellDef="let teacher">
+          <mat-icon *ngIf="teacher.IsActive" class="isTrue">check</mat-icon>
+          <mat-icon *ngIf="teacher.IsActive==false">close</mat-icon>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="TeachingId">
+        <th mat-header-cell *matHeaderCellDef>קוד סוג הוראה</th>
+        <td mat-cell *matCellDef="let teacher"> {{teacher.TeachingId}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="PhoneNumber">
+        <th mat-header-cell *matHeaderCellDef>מספר פלאפון</th>
+        <td mat-cell *matCellDef="let teacher"> {{teacher.PhoneNumber}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Adress">
+        <th mat-header-cell *matHeaderCellDef>כתובת</th>
+        <td mat-cell *matCellDef="let teacher"> {{teacher.Adress}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Email">
+        <th mat-header-cell *matHeaderCellDef>מייל</th>
+        <td mat-cell *matCellDef="let teacher"> {{teacher.Email}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="PositionHours">
+        <th mat-header-cell *matHeaderCellDef>שעות משרה</th>
+        <td mat-cell *matCellDef="let teacher"> {{teacher.PositionHours}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef=" TeacherGroup">
+        <th mat-header-cell *matHeaderCellDef>קבוצה</th>
+        <td mat-cell *matCellDef="let teacher"> {{teacher. TeacherGroup}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="TeacherStandard">
+        <th mat-header-cell *matHeaderCellDef>תקן</th>
+        <td mat-cell *matCellDef="let teacher"> {{teacher.TeacherStandard}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Permission">
+        <th mat-header-cell *matHeaderCellDef>הרשאה</th>
+        <td mat-cell *matCellDef="let teacher"> {{teacher.Permission}} </td>
+      </ng-container>
+      <!-- <ng-container matColumnDef="TeacherTz">
+      <th mat-header-cell *matHeaderCellDef>פעילה?</th>
+      <td mat-cell *matCellDef="let teacher"> {{teacher.TeacherTz}} </td>
+    </ng-container> -->
+
+
+
+      <!-- <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container> -->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  <!-- </mat-grid-tile>
+    </mat-grid-list> -->
+</div>

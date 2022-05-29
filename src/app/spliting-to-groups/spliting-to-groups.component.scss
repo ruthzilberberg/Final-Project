@@ -1,0 +1,26 @@
+app-coordinator  {
+    margin: 0;
+    padding: 0;
+    width:143px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  .mat{background-color:white;
+    width: 100% !important;
+    font-family:Fb Baznat Black;
+    display: block;
+     }
+     img { 
+      height: 52px;
+      width: 65px;
+      // padding: 3%;
+    }
+    button{background-color: white;}
+    .b{border: white;
+    border-bottom: black;}
+    .bth{
+        justify-content: center !important;
+        margin-right: 20%;
+    }

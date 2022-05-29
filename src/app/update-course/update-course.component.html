@@ -1,0 +1,22 @@
+<h2> פרטי התמחות</h2>
+<div class="example-container">
+<!-- <div>
+<mat-form-field appearance="fill">
+    <mat-label>קוד התמחות</mat-label>
+    <input matInput [(ngModel)]="data.currentCourse.CourseId">
+  </mat-form-field>
+</div> -->
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>שם התמחות</mat-label>
+    <input matInput [(ngModel)]="data.currentCourse.CourseName">
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field appearance="fill">
+      <mat-label>סוג התמחות</mat-label>
+      <input matInput [(ngModel)]="data.currentCourse.CourseType">
+    </mat-form-field>
+  </div>
+</div>
+<button (click)="saveTeacher()" ><mat-icon>save</mat-icon>שמירה</button>

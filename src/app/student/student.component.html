@@ -1,0 +1,113 @@
+
+<mat-toolbar class="mat">
+  <mat-grid-list cols="9" rowHeight="64px">
+    <mat-grid-tile colspan="2"><button  (click)="openDialog(-1)" class="b">
+      <mat-icon>add</mat-icon>הוספת תלמידה |</button> 
+   </mat-grid-tile>   <!-- <mat-grid-tile colspan="2"><a routerLink="/home"><mat-icon>delete</mat-icon> מחיקת תלמידה | </a></mat-grid-tile> -->
+    <mat-grid-tile colspan="2"> <a routerLink="/engagedStudent">עדכון תלמידה מאורסת |</a> </mat-grid-tile>
+    <mat-grid-tile colspan="2"> <a routerLink="/fileToData">הוספת קובץ תלמידות|</a> </mat-grid-tile>
+    <mat-grid-tile colspan="2"> שלום {{secretaryUser.SecretaryFirstName}} {{' '}}{{secretaryUser.SecretaryLastName}} |  </mat-grid-tile>
+    <mat-grid-tile colspan="1"><img src="assets/img/logo3.png"></mat-grid-tile>
+  </mat-grid-list>
+</mat-toolbar>
+
+<app-coordinator *ngIf="coordinator"></app-coordinator>
+<app-navigator-secretary *ngIf="secretary"></app-navigator-secretary>
+
+  <!-- <button (click)="search">חיפוש</button>
+<div *ngIf="isSearch" > 
+  <input ([ngModel])="activeStudents"></input>
+</div>
+</div> -->
+<div class="mat-elevation-z8">
+<table mat-table [dataSource]="students" matSort class="mat-elevation-z8">
+ 
+  <ng-container matColumnDef="update">
+    <th mat-header-cell *matHeaderCellDef >עריכה</th>
+    <td mat-cell *matCellDef="let student:let i = index" >{{i}}<button><mat-icon (click)="openDialog(i)">create</mat-icon> </button></td>
+  </ng-container>
+
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef>מחיקה</th>
+    <td mat-cell *matCellDef="let student:let j = index"><button>
+      <mat-icon (click)="deleteStudent(student.StudentId,j)">delete</mat-icon>
+    </button></td>
+  </ng-container>
+  
+  <ng-container matColumnDef="StudentFirstName">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> שם פרטי </th>
+    <td mat-cell *matCellDef="let student"> {{student.StudentFirstName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="StudentLastName">
+    <th mat-header-cell *matHeaderCellDef>שם משפחה</th>
+    <td mat-cell *matCellDef="let student"> {{student.StudentLastName }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="StudentTz">
+    <th mat-header-cell *matHeaderCellDef>ת.ז</th>
+    <td mat-cell *matCellDef="let student"> {{student.StudentTz}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Grade">
+    <th mat-header-cell *matHeaderCellDef>מחזור</th>
+    <td mat-cell *matCellDef="let student"> {{student.Grade}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Class">
+    <th mat-header-cell *matHeaderCellDef>מספר כיתה</th>
+    <td mat-cell *matCellDef="let student"> {{student.Class}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="IsIncludingTeaching">
+    <th mat-header-cell *matHeaderCellDef>הוראה כוללת?</th>
+    <td mat-cell *matCellDef="let student"> <mat-icon *ngIf="student.IsIncludingTeaching==false" >close</mat-icon> 
+      <mat-icon *ngIf="student.IsIncludingTeaching" class="isTrue">check</mat-icon ></td>
+  </ng-container>
+
+  <ng-container matColumnDef="IsEngaged">
+    <th mat-header-cell *matHeaderCellDef>מאורסת?</th>
+    <td mat-cell *matCellDef="let student">
+      <mat-icon *ngIf="student.IsEngaged==false">close</mat-icon> 
+      <mat-icon *ngIf="student.IsEngaged"  class="isTrue">check</mat-icon >
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="IsActive">
+    <th mat-header-cell *matHeaderCellDef>פעילה?</th>
+ 
+    <td mat-cell *matCellDef="let student" >
+      <mat-icon *ngIf="student.IsActive" class="isTrue">check</mat-icon>
+      <mat-icon *ngIf="student.IsActive==false" >close</mat-icon> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="StudentStandard">
+    <th mat-header-cell *matHeaderCellDef>תקן</th>
+    <td mat-cell *matCellDef="let student"> {{student.StudentStandard}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Course" >
+    <th mat-header-cell *matHeaderCellDef>התמחות</th>
+    <td mat-cell *matCellDef="let student" > {{courses[student.StudentId]}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Teaching" >
+    <th mat-header-cell *matHeaderCellDef>סוג הוראה</th>
+    <td mat-cell *matCellDef="let student" > {{teaching[student.StudentId]}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="GroupNumber" >
+    <th mat-header-cell *matHeaderCellDef>מספר קבוצה</th>
+    <td mat-cell *matCellDef="let student" > {{student.GroupNumber}}
+    </td>
+  </ng-container>
+ 
+   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+
+   

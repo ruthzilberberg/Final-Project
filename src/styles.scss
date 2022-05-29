@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;font-family:Fb Baznat; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; direction: rtl; font-family:Fb Baznat;}
+* {
+    font-family:Fb Baznat/* Replace with your custom font */, sans-serif !important; 
+    /* Add !important to overwrite all elements */
+  }
+  @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+  .material-icons{
+    font-family: 'Material Icons' !important;
+}

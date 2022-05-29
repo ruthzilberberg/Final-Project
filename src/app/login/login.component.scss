@@ -1,0 +1,29 @@
+button{background-color:#AE1E37;
+    color:#000000}
+
+    .example-container {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .example-container > * {
+        width: 100%;
+      }
+    
+      ::-webkit-input-placeholder { /* WebKit browsers */
+        direction: rtl;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      direction: rtl;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ but I'm not sure about working */
+      direction: rtl;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+      direction: rtl;
+    }
+    
+    .button:hover{border-color: goldenrod;}
+    .button{
+     color: blue;
+    }

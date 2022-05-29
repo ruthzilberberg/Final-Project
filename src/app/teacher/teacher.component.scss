@@ -1,0 +1,143 @@
+// mat-toolbar{display: block;}
+// img { 
+//     height: 80px;
+//     width: 100px;
+//     padding: 3%;
+// }
+
+example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.mat-elevation-z8{
+  direction:rtl;
+  width:100%;
+}
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+// .example-sidenav {
+//   padding-right: 20px;
+// }
+a :hover{color: "#AE1E37";
+background-color:"#AE1E37" ;}
+a{color: "#AE1E37";
+  background-color:"#AE1E37" ;}
+th{
+  background-color:black;
+  color: white;
+  font-family:Fb Baznat Black;
+  font-size:100%;
+}
+td{font-family:Fb Baznat}
+.mat-elevation-z8 {
+  max-height: 620px;
+  overflow: auto;
+}
+table {
+  width: 100%;
+  direction: rtl;
+  padding-left: 0%;
+  padding-right: 9%;
+}
+// #i3{ height:50px;
+//   width: 40px;}
+img { 
+  height: 52px;
+  width: 65px;
+  // padding: 3%;
+}
+mat-grid-tile{
+  :hover{
+    background-color:"#AE1E37" ;
+  }
+}
+mat-grid-list{
+  :hover{
+    background-color:"#AE1E37" ;
+  }
+}
+.mat{background-color:white;
+  width: 100% !important;
+  font-family:Fb Baznat Black;
+  display: block;
+   }
+
+mat-grid-tile {
+  background:white;
+}
+// .ng-container{ font-family:Fb Baznat;}
+
+app-coordinator  {
+  margin: 0;
+  padding: 0;
+  //גודל ה-sidenav
+  // width:9%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+app-coordinator  a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+app-coordinator  a.active {
+  background-color: black;
+  color:black;
+}
+
+/* Links on mouse-over */
+app-coordinator  a:hover:not(.active) {
+  background-color: black;
+  color: white;
+}
+app-navigator-secretary{
+  margin: 0;
+  padding: 0;
+  width:143px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+mat-elevation-z8{
+  padding-right: 15%;
+  width:85%;
+  padding: 1px 16px;
+//   height: 1000px;
+ }
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  app-coordinator {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  app-coordinator a {float:right;}
+  app-teacher{margin-right: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  app-teacher a {
+    text-align: center;
+    float: none;
+  }
+}
+mat-icon{color: #AE1E37;}
+button{background-color: white;}
+.isTrue{color:black ;}

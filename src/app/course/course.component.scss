@@ -1,0 +1,88 @@
+// .radius {
+//     border: 2px solid red;
+//     border-radius: 50px 20px;
+// }
+//   .circle{
+//     border-radius: 20px;
+//   }
+mat-icon{color: #AE1E37;}
+example-container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  .mat-elevation-z8{
+    direction:rtl;
+    width:100%;
+  }
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+  th{
+    background-color:black;
+    color: white;
+    font-family:Fb Baznat Black;
+    font-size:100%;
+  }
+  td{font-family:Fb Baznat}
+
+  table {
+        width: 100%;
+  }
+  .mat-elevation-z8 {
+   
+    max-height: 620px;
+    // max-width: 1500px;
+    
+    overflow: auto;
+  }
+  // .mat-form-field {
+  //   font-size: 14px;
+  //   width: 100%;
+  // }
+  
+  app-coordinator  {
+    margin: 0;
+    padding: 0;
+    width:143px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+ 
+  app-navigator-secretary{
+    margin: 0;
+    padding: 0;
+    width:143px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  table {
+    width: 100%;
+    direction: rtl;
+    padding-left: 0%;
+    padding-right: 9%;
+  }
+.mat{background-color:white;
+  width: 100% !important;
+  font-family:Fb Baznat Black;
+  display: block;
+   }
+   img { 
+    height: 52px;
+    width: 65px;
+    // padding: 3%;
+  }
+  button{background-color: white;}
+  .b{border: white;
+  border-bottom: black;}

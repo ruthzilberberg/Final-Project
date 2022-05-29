@@ -1,0 +1,85 @@
+<h2>עדכון פרטי תלמידה</h2>
+<div class="example-container">
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>שם פרטי</mat-label>
+    <input matInput [(ngModel)]="data.currentStudent.StudentFirstName">
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>שם משפחה</mat-label>
+    <input matInput [(ngModel)]="data.currentStudent.StudentLastName">
+  </mat-form-field>
+</div>
+<div>
+    <mat-form-field appearance="fill">
+      <mat-label>ת.ז</mat-label>
+      <input matInput [(ngModel)]="data.currentStudent.StudentTz">
+    </mat-form-field>
+  </div>
+<div>
+    <mat-form-field appearance="fill">
+      <mat-label>פעילה?</mat-label>
+      <input matInput [(ngModel)]="data.currentStudent.IsActive">
+    </mat-form-field>
+  </div>
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>מחזור</mat-label>
+    <input matInput [(ngModel)]="data.currentStudent.Grade">
+  </mat-form-field>
+</div>
+<div>
+<mat-form-field appearance="fill">
+    <mat-label>כיתה</mat-label>
+    <input matInput [(ngModel)]="data.currentStudent.Class">
+  </mat-form-field>
+</div>
+<div>
+    <!-- <mat-form-field appearance="fill">
+        <mat-label>מאורסת?</mat-label>
+        <input matInput [(ngModel)]="data.currentStudent.IsEngaged">
+      </mat-form-field>
+    </div> -->
+  
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>מספר קבוצה</mat-label>
+        <input matInput [(ngModel)]="data.currentStudent.GroupNumber" (change)="change()">
+      </mat-form-field>
+    </div>
+<div>
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>תקן לתלמידה</mat-label>
+        <input matInput [(ngModel)]="data.currentStudent.StudentStandard">
+      </mat-form-field>
+    </div>
+
+<div>
+<mat-form-field appearance="fill">
+  <mat-label>התמחות</mat-label>
+ 
+    <input matInput [(ngModel)]="courses[data.currentStudent.StudentId]" (change)="change()">
+    <!-- <input matInput [(ngModel)]="courseId" (change)="change()"> -->
+     <!-- <mat-select>
+      <mat-option *ngFor="let c of courses" [value]="c.CourseName">{{c.CourseName}}</mat-option>
+  </mat-select> -->
+</mat-form-field>
+</div>
+
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>סוג הוראה</mat-label>
+   
+      <input matInput [(ngModel)]="teaching[data.currentStudent.StudentId]"(change)="change()">
+      <!-- <input matInput [(ngModel)]="teachingId"(change)="change()"> -->
+  </mat-form-field>
+  </div>
+</div>
+
+
+
+<!-- <input  [(ngModel)]="data.currentTeacher.TeacherFirstName"/> -->
+<button (click)="saveStudent()" ><mat-icon>save</mat-icon>שמירה</button>

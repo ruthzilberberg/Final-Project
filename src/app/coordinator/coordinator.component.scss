@@ -1,0 +1,197 @@
+// $garbit-black:#333333;
+// $garbit-green:#28c0a5;
+$garbit-orang:#f1a647;
+ $garbit-red:#AE1E37;
+
+ #m:hover{
+  background-color: #F6E5CC;
+  // color: white;
+}
+.m{
+  background-color: black;
+  color: white;
+}
+.active {
+background-color: black;
+  color:white;
+}
+
+// .d-flex h-100{
+//   :hover{
+//     background-color:"#AE1E37" ;
+//   }
+// }
+// #garbage{color: black;}
+// #garbage{
+//   :hover{
+//     background-color:"#AE1E37" ;
+//   }
+// }
+img{
+  height:70px;
+  width: 67px;
+  
+}
+
+
+//שינויים
+.nav-btn {
+  // width: 130px;
+  // height: 12.5%;
+  width:137px;
+  // height: 12.5%;
+  text-align: center;
+  vertical-align: middle;
+  // line-height: 50px;
+  line-height: 25px;
+  // border-bottom: 3px dashed black;
+  border-left:3px dashed black ;
+  border-right:3px dashed black;
+  border-bottom: 3px dashed black;
+  i{
+    font-size: 24px;
+    padding: 11px;
+ 
+  }
+  span{line-height: 1.4;
+  }
+}
+.col-md-9-new {
+  max-width: 100% !important;
+}
+.cdk-overlay-pane {
+  height: 200px !important;
+  width: 200px !important;
+}
+
+.nav-btn:hover{
+  cursor: pointer;
+}
+
+.active i,
+.nav-btn:hover i
+{
+  background-color:($garbit-red);
+  //  color: white;
+  color: black;
+  border-radius: 50%;
+}
+
+
+
+.nav-btn:hover i
+
+{
+ 
+ animation: navAnimation .2s;
+ //color: white; 
+ color: black;
+}
+
+@keyframes navAnimation {
+
+  0%{
+    padding:8px;
+  }
+
+  100%{
+    padding: 11px;
+  }
+
+}
+// .a{width: 10%;}
+
+.nav-btn:hover span
+
+{
+ 
+ animation: navAnimationSpan .2s;
+  
+}
+
+@keyframes navAnimationSpan {
+
+  0%{
+    padding-top:6px;
+  }
+
+  100%{
+    padding-top: 0px;
+  }
+
+}
+
+
+
+
+// .active span,
+// .nav-btn:hover span
+// {
+//  color:($garbit-green);
+ 
+// }
+//שינויים
+.side-menu{
+  //width: 130px;
+ width: 143px;
+  background-color:white;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5);;
+  z-index: 9;
+ 
+ color:($garbit-red);
+}
+
+.main-wrap{
+ width: calc(100% - 130px);
+}
+
+
+.top-header{
+  // background-color:($garbit-black);
+   height: 49px;
+  color: white;
+  padding: 12px 20px;
+
+img{
+  position: absolute;
+  top: 0;
+  right: 130px;
+  z-index: 2;
+}
+
+
+}
+
+.log-out-btn{
+cursor: pointer;
+  background-color: transparent;
+  color: white;
+  padding: 0;
+  border: none;
+  font-size: 20px !important;
+
+  span{
+    vertical-align: middle;
+  }
+}
+// .d-flex h-100{
+//   direction:rtl;
+// }
+
+// .main-content{
+
+//   padding: 19px 48px;
+//   position: relative;
+//   height: calc(100% - 49px);
+//   overflow: auto;
+ 
+// }
+// body.rtl { direction: rtl;}
+// .rtl {
+//   direction: rtl;
+// }
+
+
+
+
+

@@ -1,0 +1,12 @@
+<mat-toolbar class="mat">
+    <mat-grid-list cols="7" rowHeight="64px">
+      <mat-grid-tile colspan="2"> 
+     </mat-grid-tile>
+      <mat-grid-tile colspan="2"></mat-grid-tile>
+         <mat-grid-tile colspan="2"> שלום {{secretaryUser.SecretaryFirstName}} {{' '}}{{secretaryUser.SecretaryLastName}} | </mat-grid-tile>
+      <mat-grid-tile colspan="1"><img src="assets/img/logo3.png"></mat-grid-tile>
+    </mat-grid-list>
+  </mat-toolbar>
+<app-coordinator ></app-coordinator>
+<button (click)="getGroups()" class="bth"> קבוצות הוראה כיתה ה'</button>
+<button (click)="getGroups()" class="bth">קבוצות הוראה כיתה ו'</button>

@@ -1,0 +1,98 @@
+.example-container {
+    height: 400px;
+    width: 550px;
+    max-width: 100%;
+    overflow: auto;
+   
+  }
+  
+  table {
+    // width: 800px;
+       width: 400px;
+      margin-left: 0.5%;
+      top: 25%;
+  }
+  // .t{width: 450px;
+  //   margin-right: 22%;
+  // }
+  .n{
+    // margin-right: 50%;
+    width: 450px;
+    margin-left: 0.5%;
+  }
+  // button{
+  //   margin-right: 9%;
+  // }
+  .c{
+    margin-right: 0.5%;
+  }
+  td.mat-column-star {
+    width: 20px;
+    padding-right: 8px;
+  }
+  
+  th.mat-column-position, td.mat-column-position {
+    padding-left: 8px;
+  }
+  
+  .mat-table-sticky:first-child {
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .mat-table-sticky:last-child {
+    border-left: 1px solid #e0e0e0;
+  }
+  app-coordinator  {
+    top: 15%;
+    margin: 0;
+    padding: 0;
+    width:143px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+ 
+
+  
+  .mat{background-color:white;
+  width: 100% !important;
+  font-family:Fb Baznat Black;
+  display: block;
+   }
+   img { 
+    height: 52px;
+    width: 65px;
+    // padding: 3%;
+  }
+  mat-icon{color: #AE1E37;}
+  button{background-color: white;
+  font-size: 80%;}
+  .isTrue{color:black ;}
+  .group{
+    margin-right: 20%;
+  }
+  .mat-elevation-z8 {
+    max-height: 400px;
+    overflow: auto;
+}
+ 
+  th{
+    background-color:black;
+    color: white;
+    font-family:Fb Baznat Black;
+    font-size:100%;
+  }
+  // ::ng-deep.matg {
+  //   top: 20%;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   position: absolute;
+  //   display: flex;
+  // align-items: right; 
+  //    justify-content: right; 
+  //   height: 100%;
+  //   padding: 0;
+  //   margin: 0;
+  // }

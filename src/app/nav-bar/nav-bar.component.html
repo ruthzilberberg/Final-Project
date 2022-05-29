@@ -1,0 +1,19 @@
+
+
+
+<mat-toolbar class="mat">
+ 
+  
+      <!-- <button mat-raised-button *ngIf="authService.currentUser()" (click)="authService.logout()" >ליציאה</button>  -->
+      <!-- <button mat-raised-button *ngIf="authService.token()" (click)="authService.logout2()" >2ליציאה</button>  -->
+
+ <!-- <button mat-raised-button ><a routerLink="/about"> אודות</a></button> -->
+ <mat-grid-list cols="4" rowHeight="64px">
+  <mat-grid-tile colspan="1"  routerLink="/home"><mat-icon>home</mat-icon></mat-grid-tile>
+  <mat-grid-tile colspan="1"  routerLink="/dashboard"> דשבורד </mat-grid-tile>
+  <mat-grid-tile colspan="1"  routerLink="/about" >אודות </mat-grid-tile>
+  <mat-grid-tile colspan="1" *ngIf="authService.currentUser()" (click)="authService.logout()">ליציאה</mat-grid-tile>
+  </mat-grid-list>
+  </mat-toolbar>
+ 
+   

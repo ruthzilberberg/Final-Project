@@ -1,0 +1,14 @@
+<mat-toolbar class="mat">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="assets/img/logo3.png"> -->
+    <button mat-fab color="#AE1E37" aria-label="Example icon button with a home icon"  routerLink="/home">
+        <mat-icon>home</mat-icon>
+      </button>
+      <button mat-raised-button *ngIf="authService.currentUser()" (click)="authService.logout()" >ליציאה</button> 
+      <!-- <button mat-raised-button *ngIf="authService.token()" (click)="authService.logout2()" >2ליציאה</button>  -->
+
+ <button mat-raised-button ><a routerLink="/about" *ngClass="header"> אודות</a></button>
+ 
+  </mat-toolbar>

@@ -1,0 +1,159 @@
+<mat-toolbar class="mat">
+  <mat-grid-list cols="7" rowHeight="64px">
+    <mat-grid-tile colspan="2"><button  (click)="openDialog(-1)" class="b">
+      <mat-icon>add</mat-icon>הוספת התמחות |</button> 
+   </mat-grid-tile>
+    <mat-grid-tile colspan="2"></mat-grid-tile>
+       <mat-grid-tile colspan="2"> שלום {{secretaryUser.SecretaryFirstName}} {{' '}}{{secretaryUser.SecretaryLastName}} | </mat-grid-tile>
+    <mat-grid-tile colspan="1"><img src="assets/img/logo3.png"></mat-grid-tile>
+  </mat-grid-list>
+</mat-toolbar>
+<!-- <app-coordinator></app-coordinator> -->
+<app-coordinator *ngIf="coordinator"></app-coordinator>
+<app-navigator-secretary *ngIf="secretary"></app-navigator-secretary>
+
+<!-- <mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+</mat-form-field> -->
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="courses" matSort >
+    <!-- <table mat-table [dataSource]="dataSource" *ngFor="let teacher of teachers"> -->
+    <!-- Position Column -->
+    <ng-container matColumnDef="update">
+      <th mat-header-cell *matHeaderCellDef >עריכה</th>
+      <td mat-cell *matCellDef="let course:let i = index"><button>
+        <mat-icon (click)="openDialog(i)">create</mat-icon>
+      </button></td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef >מחיקה</th>
+      <td mat-cell *matCellDef="let course:let j = index"><button>
+        <mat-icon (click)="deleteCourse(course.CourseId,j)">delete</mat-icon>
+      </button></td>
+    </ng-container>
+
+    <ng-container matColumnDef="CourseId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> קוד התמחות </th>
+      <td mat-cell *matCellDef="let course"> {{course.CourseId}} </td>
+    </ng-container>
+    
+    <!-- Name Column -->
+    <ng-container matColumnDef="CourseName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>שם התמחות</th>
+      <td mat-cell *matCellDef="let course"> {{course.CourseName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="CourseType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>סוג התמחות</th>
+      <td mat-cell *matCellDef="let course"> {{course.CourseType}} </td>
+    </ng-container>
+ 
+    
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    
+    <!-- Row shown when there is no matching data. -->
+    <!-- <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="3">No data matching the filter "{{input.value}}"</td>
+    </tr> -->
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+
+       <!-- <h1>התמחויות</h1>
+<h3>רשימת התמחויות</h3>
+  <div *ngFor="let course of courses">{{course.CourseId}} {{course.CourseName}} {{course.CourseType}}
+    </div>
+ <div><button (click)="getCourses()">get Course</button></div>
+
+ <h3>לפי מזהה תלמידה רשימת התמחויות</h3>
+  <label>Enter Course Id:</label>
+  <div>
+<input type="text" /></div> -->
+<!-- <input type="text" id="courseId" name="courseId" [(ngModel)]="courseId" /> -->
+<!-- <h4> -->
+  <!-- {{course.CourseId}} {{course.CourseName}} {{course.CourseType}} -->
+<!-- </h4>
+<button (click)="getCourseById()">Show Course</button> -->
+
+<!-- <h1>הוספת התמחות </h1>
+<div>
+<label>שם התמחות:</label>
+<input type="text"  /> -->
+<!-- <input type="text" id="CourseName" name="CourseName" [(ngModel)]="course.CourseName" /> -->
+<!-- </div>
+
+<label>סוג התמחות:</label>
+<input type="text"/> -->
+<!-- <input type="text" id="CourseType" name="CourseType" [(ngModel)]="course.CourseType"/> -->
+<!-- <div>
+<button (click)="addCourse()">הוספת התמחות</button>
+</div>
+
+<div>
+  <h1>עדכון התמחות </h1>
+  <div>
+  <label>הכנס קוד התמחות</label>
+<input type="number" id="courseId" name="courseId" [(ngModel)]="courseId"/>
+</div>
+
+  <label>שם התמחות:</label>
+  <input type="text" id="CourseName" name="CourseName" [(ngModel)]="course.CourseName" />
+  </div>
+<div class=dialog>
+  <div>
+  <label>סוג התמחות:</label>
+  
+  <select  name="CourseType" [(ngModel)]="getCourses()">
+   
+    <option *ngFor="let course of courses"> {{course.CourseName}} 
+    </option> -->
+<!-- </select> -->
+
+
+<!-- <input type="text" id="CourseType" name="CourseType" [(ngModel)]="course.CourseType" /> -->
+<!-- </div>
+
+<button (click)="updateCourse()">עדכון התמחות</button>
+
+<h1>מחיקת התמחות לפי מזהה התמחות</h1> --> 
+
+<!-- <mat-form-field appearance="fill">
+  <mat-label>בחר התמחות</mat-label>
+  <mat-select>
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let course of courses" [value]="course" name="" [(ngModel)]="course.CourseId">{{course.CourseName}}</mat-option>
+  </mat-select>
+</mat-form-field> -->
+
+<!-- <div>
+<label>הכנס קוד התמחות</label>
+<input type="text" id="courseId" name="courseId" [(ngModel)]="courseId" />
+</div> -->
+
+<!-- <button (click)=" deleteCourse()">מחיקת התמחות</button> -->
+
+
+<!-- <button mat-button (click)="openDialog()">Launch dialog</button> -->
+
+
+<!-- <h4>עדכון התמחות</h4>
+<mat-form-field appearance="fill">
+  <mat-label>רשימת התמחויות</mat-label>
+  <mat-select>
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let course of courses" [value]="course" name="" [(ngModel)]="course.CourseId">{{course.CourseName}}</mat-option>
+  </mat-select>
+</mat-form-field> -->
+
+
+       <!-- <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator> -->
+            

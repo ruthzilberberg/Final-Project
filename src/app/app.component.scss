@@ -1,0 +1,26 @@
+// mat-toolbar{display:none;}
+    ::ng-deep.mat-grid-tile.mat-figure{
+      justify-content: right !important;
+      width: 100% !important;
+    }
+    *{
+        direction: rtl;
+      }
+   button{color:#AE1E37}
+//    mat-toolbar{background-color: #000000;}
+.container {
+  display: flex; 
+  flex-direction: row-reverse;
+}
+// <body dir="rtl">
+.rtl {
+  direction: rtl;
+}
+mat-toolbar{width:100% !important;}
+mat-grid-list{width:100% !important;}
+mat-grid-tile{width:100% !important;}
+app-coordinator{width:100%!important;padding-right: 0%;}
+table{width:85% !important;
+padding-right: 15%;}
+
+
